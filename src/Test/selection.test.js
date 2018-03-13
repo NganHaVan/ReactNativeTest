@@ -20,17 +20,4 @@ describe('selection reducer',()=>{
 
     expect(selectionReducer(data,getAction)).toEqual(data);
   });
-  it('handles ADD_SELECTION',()=>{
-    const addAction=allActions.addSelection(20);
-    console.log("====DATA AFTER ADD====");
-    console.log(selectionReducer(data,addAction));
-    console.log("====END====");
-
-  });
-  it('handle DELETE_SELECTION',()=>{
-    const deleteAction=allActions.deleteSelection(data[0].numberId);
-    console.log("====DATA AFTER DELETE====");
-    console.log(selectionReducer(data,deleteAction));
-    console.log("====END====");
-  })
 })

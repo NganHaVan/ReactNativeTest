@@ -31,7 +31,6 @@ class Counter extends Component {
 
   handleAdd=(number)=>{
     this.props.addSelection(number);
-    console.log(this.props);
     const {navigate}=this.props.navigation;
     navigate('Selection');
   }
@@ -95,7 +94,6 @@ const styles=StyleSheet.create({
 })
 
 const mapStateToProps=(state)=>{
-  console.log(state);
   return {
     currentNumber:state.counterReducer
   }
