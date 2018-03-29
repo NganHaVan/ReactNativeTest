@@ -1,21 +1,15 @@
 
 
-export const getSelection=()=>{
-  return {
-    type:'GET_SELECTION'
-  }
-}
+export const getSelection = () => ({
+  type: 'GET_SELECTION',
+});
 
-export const addSelection=(number)=>{
-  return {
-    type:'ADD',
-    number
-  }
-}
+export const addSelection = number => ({
+  type: 'ADD',
+  number,
+});
 
-export const deleteSelection=(numberId)=>{
-  return {
-    type:'DELETE',
-    numberId
-  }
-}
+export const deleteSelection = numberId => ({
+  type: 'DELETE',
+  numberId,
+});
