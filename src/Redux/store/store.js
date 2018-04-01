@@ -4,6 +4,7 @@ import thunk from 'redux-thunk';
 import { persistReducer } from 'redux-persist';
 import devTools from 'remote-redux-devtools';
 import storage from 'redux-persist/lib/storage';
+// import devToolsEnhancer from 'remote-redux-devtools';
 
 import reducers from '../reducers/reducers';
 
@@ -13,10 +14,6 @@ const persistConfig = {
 };
 
 const persistedReducer = persistReducer(persistConfig, reducers);
-
-/* const composeEnhancers=compose(
-  window.devToolsExtension ? window.devToolsExtension() : f=>f
-); */
 
 const enhancers = compose(
   applyMiddleware(thunk, createLogger()),

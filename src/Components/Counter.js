@@ -7,7 +7,7 @@ import { bindActionCreators } from 'redux';
 import { increment, decrement } from '../Redux/actions/counterActions';
 import { addSelection } from '../Redux/actions/selectionActions';
 
-class Counter extends Component {
+class Counter extends React.Component {
   static navigationOptions = ({ navigation }) => {
     const tabBarLabel = 'Counter';
     const tabBarIcon = () => {

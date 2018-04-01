@@ -16,8 +16,10 @@
     "jest-expo": "25.0.0",
     "prettier": "^1.11.1",
     "prettier-eslint": "^8.8.1",
+    "react-native-debugger-open": "^0.3.17",
     "react-native-scripts": "1.11.1",
     "react-test-renderer": "16.2.0",
+    "remote-redux-devtools": "^0.5.12",
     "remotedev-rn-debugger": "^0.8.3"
   },
   "main": "./node_modules/react-native-scripts/build/bin/crna-entry.js",
@@ -31,11 +33,9 @@
     "devTools": "react-devtools",
     "lint": "./node_modules/.bin/eslint --no-eslintrc ./src/Test --ext .jsx --ext .js  src",
     "lint:fix": "./node_modules/.bin/eslint --no-eslintrc ./src/Test --ext .jsx --ext .js --fix  src",
-    "lint:debug": "./node_modules/.bin/eslint --debug"
-  },
-  "remotedev": {
-    "hostname": "localhost",
-    "port": 5678
+    "lint:debug": "./node_modules/.bin/eslint --debug",
+    "remotedev": "remotedev --hostname=localhost --port=5678 --injectserver=reactnative",
+    "postinstall": "yarn run remotedev"
   },
   "jest": {
     "preset": "jest-expo"
@@ -56,6 +56,6 @@
     "redux-logger": "^3.0.6",
     "redux-persist": "^5.9.1",
     "redux-thunk": "^2.2.0",
-    "remote-redux-devtools": "^0.5.12"
+    "remotedev-server": "^0.2.4"
   }
 }
